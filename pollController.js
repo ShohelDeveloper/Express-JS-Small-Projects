@@ -1,4 +1,4 @@
-const poll = require("./Poll")
+const Poll = require("./Poll")
 
 exports.createPollGetController = (req,res,next)=> {
     res.render('create')
@@ -20,7 +20,7 @@ exports.createPollPostController = async (req,res,next) =>{
     description,
     options
    })
-console.log(poll)
+
    try{
     await poll.save()
 
